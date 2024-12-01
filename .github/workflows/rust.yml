@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: find . -name "day*" -depth 1 -type d -exec sh -c "cd {} && cargo build --verbose; cd .." \;
+      run: make build
     - name: Run tests
-      run: find . -name "day*" -depth 1 -type d -exec sh -c "cd {} && cargo test --verbose; cd .." \;
+      run: make test
