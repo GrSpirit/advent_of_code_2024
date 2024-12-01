@@ -16,9 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build day01
-      working-directory: day01
-      run: cargo build --verbose
+    - name: Build
+      run: make build
     - name: Run tests
-      working-directory: day01
-      run: cargo test --verbose
+      run: make test
