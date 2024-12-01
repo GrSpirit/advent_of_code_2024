@@ -17,8 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      shell: sh
-      run: make build
+      run: python3 build.py
     - name: Run tests
-      shell: sh
-      run: make test
+      run: python3 test.py
