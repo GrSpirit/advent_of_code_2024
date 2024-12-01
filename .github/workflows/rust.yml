@@ -1,4 +1,4 @@
-name: Rust
+name: Rust build and test all
 
 on:
   push:
@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: cargo build --verbose
+      run: find . -depth 1 -type d -name "day*" -exec sh -c "cd {} && cargo build --verbose; cd .." \;
     - name: Run tests
-      run: cargo test --verbose
+      run: find . -depth 1 -type d -name "day*" -exec sh -c "cd {} && cargo test --verbose; cd .." \;
