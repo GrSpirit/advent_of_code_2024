@@ -1,0 +1,9 @@
+[package]
+name = "day04"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+thiserror = "2.0"
+strum = "0.26"
+strum_macros = "0.26"
